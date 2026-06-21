@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ...document.querySelectorAll('.profile-sidebar-card'),
         ...document.querySelectorAll('.academic-callout'),
         ...document.querySelectorAll('.agenda-card-item'),
-        ...document.querySelectorAll('.eco-item-card'),
+        ...document.querySelectorAll('.skill-item-card'),
         ...document.querySelectorAll('.pub-item'),
         ...document.querySelectorAll('.timeline-item'),
         ...document.querySelectorAll('.leader-card'),

@@ -56,13 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             timelineItems.forEach(item => {
                 const category = item.getAttribute('data-category');
                 
-                if (filterValue === 'all') {
-                    item.classList.remove('hidden');
-                } else if (filterValue === 'teaching' && category === 'teaching') {
-                    item.classList.remove('hidden');
-                } else if (filterValue === 'policy' && category === 'policy') {
-                    item.classList.remove('hidden');
-                } else if (filterValue === 'projects' && category === 'projects') {
+                if (filterValue === 'all' || filterValue === category) {
                     item.classList.remove('hidden');
                 } else {
                     item.classList.add('hidden');

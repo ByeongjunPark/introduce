@@ -1352,78 +1352,89 @@ body[data-theme="light"] .icon-moon { display: block; }
     background: var(--bg-tertiary);
 }
 
-/* Grants Table Styling */
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius-md);
+/* Grants Grid & Cards Styling */
+.grants-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
     margin-top: 24px;
     margin-bottom: 24px;
-    box-shadow: var(--card-shadow);
+}
+
+.grant-card {
     background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+    box-shadow: var(--card-shadow);
 }
 
-.grants-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-    font-size: 0.95rem;
+.grant-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-light);
+    background: var(--bg-tertiary);
+    box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.15);
 }
 
-.grants-table th, .grants-table td {
-    padding: 16px 20px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.grants-table th {
-    background-color: var(--bg-tertiary);
-    font-family: var(--font-heading);
-    font-weight: 600;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 0.05em;
-}
-
-.grants-table tr:last-child td {
-    border-bottom: none;
-}
-
-.grants-table tbody tr {
-    transition: background-color var(--transition-fast);
-}
-
-.grants-table tbody tr:hover {
-    background-color: rgba(99, 102, 241, 0.04);
-}
-
-.project-title-cell {
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-.role-badge {
+.grant-funding {
     display: inline-block;
-    padding: 4px 12px;
-    background: rgba(99, 102, 241, 0.1);
-    color: var(--primary-light);
+    padding: 6px 14px;
+    background: rgba(16, 185, 129, 0.08);
+    color: var(--accent-light);
     border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.grant-funding small {
+    font-weight: 500;
+    color: var(--text-secondary);
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 2px;
+}
+
+.grant-name {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.45;
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+.grant-giver {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.grant-giver i {
+    color: var(--primary-light);
+}
+
+.grant-role-badge {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(99, 102, 241, 0.06);
+    color: var(--primary-light);
+    border-radius: var(--border-radius-sm);
     font-size: 0.8rem;
     font-weight: 600;
-    white-space: nowrap;
-}
-
-.amount-cell {
-    font-weight: 700;
-    color: var(--accent-color);
-    line-height: 1.4;
-    white-space: nowrap;
-}
-
-.amount-cell small {
-    font-weight: 500;
-    color: var(--text-muted);
+    align-self: flex-start;
+    border: 1px solid rgba(99, 102, 241, 0.1);
 }
 
 /* ==========================================================================
@@ -1564,7 +1575,7 @@ body[data-theme="light"] .icon-moon { display: block; }
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 992px) {
-    .about-academic-layout, .skills-grid-detailed, .agenda-grid {
+    .about-academic-layout, .skills-grid-detailed, .agenda-grid, .grants-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }

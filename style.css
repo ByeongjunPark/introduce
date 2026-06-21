@@ -936,6 +936,10 @@ body[data-theme="light"] .icon-moon { display: block; }
 /* ==========================================================================
    PUBLICATIONS & RESEARCH SECTION
    ========================================================================== */
+.publications-section {
+    background-color: var(--bg-secondary);
+}
+
 .publications-list {
     display: flex;
     flex-direction: column;
@@ -1023,7 +1027,7 @@ body[data-theme="light"] .icon-moon { display: block; }
    EXPERIENCE SECTION (TIMELINE)
    ========================================================================== */
 .experience-section {
-    background-color: var(--bg-secondary);
+    /* defaults to bg-primary for alternating backgrounds */
 }
 
 .filter-controls {
@@ -1329,11 +1333,15 @@ body[data-theme="light"] .icon-moon { display: block; }
     margin-top: auto;
 }
 
+.awards-section {
+    background-color: var(--bg-secondary);
+}
+
 /* ==========================================================================
    MEDIA COVERAGES & PRESENTATIONS
    ========================================================================== */
 .media-section {
-    background-color: var(--bg-secondary);
+    /* defaults to bg-primary for alternating backgrounds */
 }
 
 .media-grid {

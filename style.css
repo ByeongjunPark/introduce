@@ -753,7 +753,7 @@ body[data-theme="light"] .icon-moon { display: block; }
 
 /* Research Interests Styling */
 .interests-container {
-    margin-top: 28px;
+    margin-top: 0;
 }
 
 .interests-title {
@@ -778,7 +778,7 @@ body[data-theme="light"] .icon-moon { display: block; }
 }
 
 .interest-tag {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     border: 1px solid var(--border-color);
     color: var(--text-secondary);
     padding: 6px 14px;
@@ -793,6 +793,12 @@ body[data-theme="light"] .icon-moon { display: block; }
     border-color: var(--primary-light);
     color: var(--text-primary);
     background: var(--bg-tertiary);
+}
+
+.interests-divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 28px 0;
 }
 
 .styled-list {

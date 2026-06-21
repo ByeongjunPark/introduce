@@ -1344,6 +1344,66 @@ body[data-theme="light"] .icon-moon { display: block; }
     background-color: var(--bg-secondary);
 }
 
+.awards-section .award-item, .awards-section .grant-item {
+    background: var(--bg-primary);
+}
+
+.awards-section .award-item:hover, .awards-section .grant-item:hover {
+    background: var(--bg-tertiary);
+}
+
+.grants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.grant-item {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.grant-item:hover {
+    border-color: var(--primary-light);
+    box-shadow: var(--card-shadow);
+}
+
+.grant-funding {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-light);
+    background: rgba(16, 185, 129, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 12px;
+}
+
+.grant-name {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.35;
+}
+
+.grant-giver {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.grant-role {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: auto;
+}
+
 /* ==========================================================================
    MEDIA COVERAGES & PRESENTATIONS
    ========================================================================== */

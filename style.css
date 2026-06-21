@@ -751,6 +751,50 @@ body[data-theme="light"] .icon-moon { display: block; }
     line-height: 1.6;
 }
 
+/* Research Interests Styling */
+.interests-container {
+    margin-top: 28px;
+}
+
+.interests-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.interests-title i {
+    color: var(--accent-light);
+}
+
+.interests-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.interest-tag {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: transform var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.interest-tag:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-light);
+    color: var(--text-primary);
+    background: var(--bg-tertiary);
+}
+
 .styled-list {
     margin-top: 12px;
     display: flex;

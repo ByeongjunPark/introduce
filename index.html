@@ -124,7 +124,31 @@
     <section class="about-section" id="about">
         <div class="section-container">
             <h2 class="section-title text-center">About Me</h2>
+            
             <div class="about-academic-layout">
+                <!-- Left: Profile Photo Sidebar -->
+                <div class="profile-sidebar-card">
+                    <div class="profile-img-container">
+                        <img src="assets/profile.jpg" alt="Byeong-jun Park" class="profile-img" onerror="this.style.display='none'; document.getElementById('profile-fallback').style.display='flex';">
+                        <div id="profile-fallback" class="profile-fallback">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span class="fallback-text">Photo Placeholder<br><small>Place photo as assets/profile.jpg</small></span>
+                        </div>
+                    </div>
+                    <div class="profile-quick-details">
+                        <h3>Byeong-jun Park</h3>
+                        <p class="korean-name-sidebar">박병준</p>
+                        <p class="position">EdTech Researcher & Teacher</p>
+                        <div class="sidebar-divider"></div>
+                        <div class="sidebar-contact-info">
+                            <a href="mailto:pbj@gdeal.io"><i class="fa-solid fa-envelope"></i> pbj@gdeal.io</a>
+                            <a href="https://www.linkedin.com/in/iampbj/" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/iampbj</a>
+                            <a href="https://instagram.com/goodteacher_social" target="_blank"><i class="fa-brands fa-instagram"></i> @goodteacher_social</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Detailed Credentials & Narrative -->
                 <div class="about-academic-text">
                     <p class="lead">
                         Welcome! I am Byeong-jun Park (박병준), a dedicated Social Studies teacher, educational technology researcher, and innovator based in Gyeongsangnam-do, South Korea.
@@ -161,35 +185,44 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="research-interests-card">
-                    <h3 class="interests-title"><i class="fa-solid fa-flask"></i> Research Interests</h3>
-                    <ul class="interests-list">
-                        <li>
-                            <strong>AI-Education (AIED)</strong>
-                            <span>Deploying chatbot-based scaffolding and analyzing student writing output.</span>
-                        </li>
-                        <li>
-                            <strong>Assessment & Feedback</strong>
-                            <span>Creating automated, qualitative feedback mechanisms to guide student writing.</span>
-                        </li>
-                        <li>
-                            <strong>Learning Experience Design (LXD)</strong>
-                            <span>Translating instructional theories into digital structures.</span>
-                        </li>
-                        <li>
-                            <strong>Professional Learning Communities (PLC)</strong>
-                            <span>Examining teacher agency and regional digital educator alliances.</span>
-                        </li>
-                        <li>
-                            <strong>AI/Digital Literacy</strong>
-                            <span>Structuring secondary school digital curriculum framework standards.</span>
-                        </li>
-                        <li>
-                            <strong>Digital Divide</strong>
-                            <span>Bridging technology disparities in rural public education infrastructures.</span>
-                        </li>
-                    </ul>
+            <!-- Ph.D. Research Agenda block -->
+            <div class="research-agenda-block">
+                <div class="agenda-header">
+                    <i class="fa-solid fa-flask-vial"></i>
+                    <h3>Current Ph.D. Research Questions & Agenda</h3>
+                </div>
+                <p class="agenda-intro">My academic research centers on evaluating the pedagogical efficacy and agency effects of AI-generated feedback in secondary humanities education, addressing the following core inquiries:</p>
+                <div class="agenda-grid">
+                    <div class="agenda-card-item">
+                        <span class="agenda-num">Q1</span>
+                        <div class="agenda-body">
+                            <h4>AI-Based Feedback Acceptance & Engagement</h4>
+                            <p>Do learners genuinely accept AI-generated feedback and apply it as a concrete spark for revision? If not, what cognitive or psychological barriers prevent them from doing so?</p>
+                        </div>
+                    </div>
+                    <div class="agenda-card-item">
+                        <span class="agenda-num">Q2</span>
+                        <div class="agenda-body">
+                            <h4>Feedback Literacy & Agentic Scaffolding</h4>
+                            <p>How can we design instructional scaffolding and user experiences that enable secondary students to critically evaluate, adapt, and proactively adopt AI-driven feedback?</p>
+                        </div>
+                    </div>
+                    <div class="agenda-card-item">
+                        <span class="agenda-num">Q3</span>
+                        <div class="agenda-body">
+                            <h4>Cognitive Residue via AI Interaction</h4>
+                            <p>How can we engineer student-AI dialogue interactions to ensure learners retain "cognitive residue" (concept integration and memory) rather than offloading all thinking to AI agents?</p>
+                        </div>
+                    </div>
+                    <div class="agenda-card-item">
+                        <span class="agenda-num">Q4</span>
+                        <div class="agenda-body">
+                            <h4>Impact on Learner Agency & Metacognition</h4>
+                            <p>How do these conversational AI feedback architectures influence secondary school students' overall agency, self-directed learning models, and meta-learning capacities?</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

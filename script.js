@@ -112,8 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Targets to animate
     const elementsToReveal = [
+        ...document.querySelectorAll('.profile-sidebar-card'),
         ...document.querySelectorAll('.academic-callout'),
-        ...document.querySelectorAll('.research-interests-card'),
+        ...document.querySelectorAll('.agenda-card-item'),
         ...document.querySelectorAll('.eco-item-card'),
         ...document.querySelectorAll('.pub-item'),
         ...document.querySelectorAll('.timeline-item'),

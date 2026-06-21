@@ -133,7 +133,7 @@ img {
     width: 100%;
     max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 80px 24px;
+    padding: 44px 24px;
 }
 
 .text-center { text-align: center; }
@@ -159,8 +159,8 @@ img {
 }
 
 .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
     position: relative;
     display: inline-block;
     left: 50%;
@@ -170,23 +170,23 @@ img {
 .section-title::after {
     content: '';
     display: block;
-    width: 60px;
-    height: 4px;
+    width: 50px;
+    height: 3px;
     background: var(--text-gradient);
     border-radius: 2px;
-    margin: 12px auto 0 auto;
+    margin: 8px auto 0 auto;
 }
 
 .section-subtitle {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     color: var(--text-secondary);
     max-width: 600px;
-    margin: -10px auto 40px auto;
+    margin: -6px auto 28px auto;
 }
 
 .sub-section-title {
-    font-size: 1.75rem;
-    margin: 40px 0 20px 0;
+    font-size: 1.6rem;
+    margin: 24px 0 16px 0;
     color: var(--text-primary);
     border-left: 4px solid var(--primary-color);
     padding-left: 15px;
@@ -388,11 +388,12 @@ body[data-theme="light"] .icon-moon { display: block; }
    HERO SECTION
    ========================================================================== */
 .hero-section {
-    min-height: 100vh;
+    min-height: auto;
+    padding-top: 130px;
+    padding-bottom: 70px;
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 70px;
     overflow: hidden;
 }
 
@@ -877,7 +878,7 @@ body[data-theme="light"] .icon-moon { display: block; }
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
-    margin-bottom: 50px;
+    margin-bottom: 28px;
 }
 
 .filter-btn {
@@ -923,7 +924,7 @@ body[data-theme="light"] .icon-moon { display: block; }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
     padding-left: 80px;
     transition: opacity var(--transition-normal), transform var(--transition-normal);
 }
@@ -1044,7 +1045,7 @@ body[data-theme="light"] .icon-moon { display: block; }
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
 }
 
 .leader-card {

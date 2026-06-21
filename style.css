@@ -498,10 +498,8 @@ body[data-theme="light"] .icon-moon { display: block; }
 }
 
 .scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin: 40px auto 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1211,6 +1209,17 @@ body[data-theme="light"] .icon-moon { display: block; }
     flex-shrink: 0;
 }
 
+.leader-logo-container.gdeal-logo-container {
+    background: #45AF76;
+    padding: 6px;
+}
+
+.leader-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .leader-card:nth-child(even) .leader-logo-container {
     background: var(--bg-tertiary);
     color: var(--text-primary);
@@ -1443,6 +1452,10 @@ body[data-theme="light"] .icon-moon { display: block; }
 }
 
 @media (max-width: 768px) {
+    .scroll-indicator {
+        display: none;
+    }
+
     .section-container {
         padding: 60px 20px;
     }

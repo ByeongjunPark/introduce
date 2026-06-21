@@ -112,16 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Targets to animate
     const elementsToReveal = [
-        ...document.querySelectorAll('.framework-card'),
-        ...document.querySelectorAll('.eco-card'),
+        ...document.querySelectorAll('.academic-callout'),
+        ...document.querySelectorAll('.research-interests-card'),
+        ...document.querySelectorAll('.eco-item-card'),
         ...document.querySelectorAll('.pub-item'),
         ...document.querySelectorAll('.timeline-item'),
         ...document.querySelectorAll('.leader-card'),
         ...document.querySelectorAll('.award-item'),
-        ...document.querySelectorAll('.media-card'),
-        ...document.querySelectorAll('.life-block'),
-        ...document.querySelectorAll('.contact-info-panel'),
-        ...document.querySelectorAll('.contact-form-panel')
+        ...document.querySelectorAll('.media-card')
     ];
 
     elementsToReveal.forEach(el => el.classList.add('reveal-element'));
@@ -150,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
         elementsToReveal.forEach(el => observer.observe(el));
     } else {
@@ -186,52 +184,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', updateActiveNavLink);
     updateActiveNavLink(); // Initial check
-
-    // ==========================================================================
-    // CONTACT FORM SUBMISSION MOCK
-    // ==========================================================================
-    const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-    const submitBtn = document.getElementById('form-submit-btn');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Visual loading state
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending Message...';
-            formStatus.className = 'form-status';
-            formStatus.textContent = '';
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            // Simulate server network latency
-            setTimeout(() => {
-                try {
-                    // Log to console for debugging/demo
-                    console.log('--- Form Submission ---');
-                    console.log(`Name: ${name}`);
-                    console.log(`Email: ${email}`);
-                    console.log(`Subject: ${subject}`);
-                    console.log(`Message: ${message}`);
-
-                    // Success Feedback
-                    formStatus.className = 'form-status success';
-                    formStatus.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully.';
-                    contactForm.reset();
-                } catch (error) {
-                    // Error Feedback
-                    formStatus.className = 'form-status error';
-                    formStatus.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> Oops! Something went wrong. Please try again.';
-                } finally {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Send Message';
-                }
-            }, 1200);
-        });
-    }
 });

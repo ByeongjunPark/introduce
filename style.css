@@ -795,44 +795,59 @@ body[data-theme="light"] .icon-moon { display: block; }
     background: var(--bg-tertiary);
 }
 
-.secondary-interests {
-    margin-top: 24px;
-    padding-top: 20px;
-    border-top: 1px dashed var(--border-color);
+.secondary-interests-section {
+    margin-top: 0;
 }
 
-.secondary-interests-title {
-    font-family: var(--font-heading);
-    font-size: 0.95rem;
-    color: var(--text-primary);
-    margin-bottom: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+.secondary-interests-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
 }
 
-.secondary-interests-list {
-    list-style: none;
-    padding-left: 0;
+.secondary-card-item {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 24px;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    align-items: flex-start;
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
 }
 
-.secondary-interests-list li {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.5;
-    position: relative;
-    padding-left: 18px;
+.secondary-card-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-light);
 }
 
-.secondary-interests-list li::before {
-    content: "•";
-    position: absolute;
-    left: 4px;
+.secondary-icon-badge {
+    font-size: 1.25rem;
     color: var(--accent-light);
-    font-weight: bold;
+    background: rgba(16, 185, 129, 0.1);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.secondary-body h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.35;
+    font-weight: 600;
+}
+
+.secondary-body p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin: 0;
 }
 
 .interests-divider {
@@ -1665,7 +1680,7 @@ body[data-theme="light"] .icon-moon { display: block; }
    RESPONSIVE DESIGN (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 992px) {
-    .about-academic-layout, .skills-grid-detailed, .agenda-grid, .grants-grid {
+    .about-academic-layout, .skills-grid-detailed, .agenda-grid, .grants-grid, .secondary-interests-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }

@@ -562,7 +562,7 @@ body[data-theme="light"] .icon-moon { display: block; }
     display: grid;
     grid-template-columns: 280px 1fr;
     gap: 40px;
-    align-items: start;
+    align-items: center;
     margin-top: 30px;
 }
 

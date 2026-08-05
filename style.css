@@ -1887,6 +1887,12 @@ body[data-theme="light"] .icon-moon { display: block; }
     border: 1px solid rgba(245, 158, 11, 0.2);
 }
 
+.vibe-category-badge.pd {
+    color: #a855f7; /* purple-500 */
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
 .vibe-card-icon {
     font-size: 1.5rem;
     color: var(--accent-light);
